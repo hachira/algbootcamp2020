@@ -6,13 +6,11 @@ def isPelindrome(n):
 		a //= 10
 	return n == r
 
-def A002113_list(nMax):
-  mlist=[]
-  for n in range(nMax+1):
-     mstr=str(n)
-     if mstr==mstr[::-1]:
-        mlist.append(n)
-  return(mlist)
-
-print(A002113_list(40))
+k = int(input())
+s = 0
+while k > 0:
+	s += 1
+	if isPelindrome(s):
+		k -= 1
+print(s)
 
