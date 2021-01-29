@@ -16,7 +16,6 @@ public class lab {
 			int b = scan.nextInt();
 			int w = scan.nextInt();
 			adjMat[a][b] = w;
-			adjMat[b][a] = w;
 		}
 
 		Queue<Pair> que = new PriorityQueue(n, 
@@ -28,20 +27,19 @@ public class lab {
 		for(int i = 1; i <= n; i++) values[i] = INF;
 		values[1] = 0;
 		que.add(new Pair(0, 1));
-		int sum = 0;
 		while(!que.isEmpty()) {
 			Pair r = que.remove();
 			if(visited[r.value]) continue;
-			sum += values[r.value];
 			visited[r.value] = true;
 			for(int i = 1; i <= n; i++) {
 				if(adjMat[r.value][i] == 0 || visited[i]) continue;
-				if(values[i] > adjMat[r.value][i]) {
-					values[i] = adjMat[r.value][i];
-					que.add(new Pair(values[i], i));
+				int t = values[r.value] + adjMat[r.value][i];
+				if(values[i] > t) {
+					values[i] = t;
+					que.add(new Pair(t, i));
 				}
 			}
 		}
-		System.out.println(sum);
+		for(int i = 1; i <= n; i++) System.out.println(values[i]);
 	}
 }
