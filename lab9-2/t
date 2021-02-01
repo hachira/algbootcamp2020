@@ -1,0 +1,39 @@
+lab.cpp: In function ‘int main()’:
+lab.cpp:27:57: error: wrong number of template arguments (0, should be at least 1)
+  std::priority_queue<std::pair<float, int>, std::vector<>,
+                                                         ^
+In file included from /usr/include/c++/7/vector:64:0,
+                 from lab.cpp:3:
+/usr/include/c++/7/bits/stl_vector.h:216:11: note: provided for ‘template<class _Tp, class _Alloc> class std::vector’
+     class vector : protected _Vector_base<_Tp, _Alloc>
+           ^~~~~~
+lab.cpp:28:16: error: wrong number of template arguments (0, should be 1)
+   std::greater<> pq;
+                ^
+In file included from /usr/include/c++/7/queue:63:0,
+                 from lab.cpp:4:
+/usr/include/c++/7/bits/stl_function.h:371:12: note: provided for ‘template<class _Tp> struct std::greater’
+     struct greater : public binary_function<_Tp, _Tp, bool>
+            ^~~~~~~
+lab.cpp:28:18: error: template argument 2 is invalid
+   std::greater<> pq;
+                  ^~
+lab.cpp:28:18: error: template argument 3 is invalid
+lab.cpp:34:2: error: ‘pq’ was not declared in this scope
+  pq.push({ 0, start });
+  ^~
+lab.cpp:16:7: warning: ignoring return value of ‘int scanf(const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+  scanf("%d", &n);
+  ~~~~~^~~~~~~~~~
+lab.cpp:18:35: warning: ignoring return value of ‘int scanf(const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+  for(int i = 1; i <= n; i++) scanf("%d%d", &v[i][0], &v[i][1]);
+                              ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+lab.cpp:19:7: warning: ignoring return value of ‘int scanf(const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+  scanf("%d", &k);
+  ~~~~~^~~~~~~~~~
+lab.cpp:24:8: warning: ignoring return value of ‘int scanf(const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+   scanf("%d%d", &a, &b);
+   ~~~~~^~~~~~~~~~~~~~~~
+lab.cpp:30:7: warning: ignoring return value of ‘int scanf(const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+  scanf("%d%d", &start, &end);
+  ~~~~~^~~~~~~~~~~~~~~~~~~~~~
