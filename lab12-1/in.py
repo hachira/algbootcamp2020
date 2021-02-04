@@ -1,5 +1,5 @@
 import random
-n = random.randrange(100, 10000)
+n = random.randrange(1000, 100000)
 print(n)
 s = ""
 for _ in range(n):
