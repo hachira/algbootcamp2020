@@ -1,0 +1,34 @@
+lab.cpp: In member function ‘void PriorityQueue<T>::push(T)’:
+lab.cpp:13:9: error: there are no arguments to ‘_push’ that depend on a template parameter, so a declaration of ‘_push’ must be available [-fpermissive]
+         _push(size);    // heapify
+         ^~~~~
+lab.cpp:13:9: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+lab.cpp: In member function ‘T PriorityQueue<T>::pop()’:
+lab.cpp:19:9: error: there are no arguments to ‘_pop’ that depend on a template parameter, so a declaration of ‘_pop’ must be available [-fpermissive]
+         _pop(1);        // heapify
+         ^~~~
+lab.cpp: At global scope:
+lab.cpp:27:39: error: no ‘void PriorityQueue<T>::_push(int)’ member function declared in class ‘PriorityQueue<T>’
+ void PriorityQueue<T>::_push(int child) {
+                                       ^
+lab.cpp:36:39: error: no ‘void PriorityQueue<T>::_pop(int)’ member function declared in class ‘PriorityQueue<T>’
+ void PriorityQueue<T>::_pop(int parent) {
+                                       ^
+lab.cpp: In instantiation of ‘T PriorityQueue<T>::pop() [with T = int]’:
+lab.cpp:61:39:   required from here
+lab.cpp:19:13: error: ‘_pop’ was not declared in this scope
+         _pop(1);        // heapify
+         ~~~~^~~
+lab.cpp:19:13: note: suggested alternative: ‘pop’
+         _pop(1);        // heapify
+         ~~~~^~~
+         pop
+lab.cpp: In instantiation of ‘void PriorityQueue<T>::push(T) [with T = int]’:
+lab.cpp:65:24:   required from here
+lab.cpp:13:14: error: ‘_push’ was not declared in this scope
+         _push(size);    // heapify
+         ~~~~~^~~~~~
+lab.cpp:13:14: note: suggested alternative: ‘push’
+         _push(size);    // heapify
+         ~~~~~^~~~~~
+         push
